@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      body {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      div {
+        padding: 5px;
+      }
+      .table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      table {
+        border-collapse: collapse;
+        width: 70%;
+      }
+      th,
+      td {
+        border-bottom: 1px solid rgb(0, 60, 0);
+        padding: 5px;
+      }
+      td {
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .labels {
+        font-weight: bold;
+        background-color: rgb(130, 200, 106);
+        border-bottom: 2px solid rgb(0, 0, 0);
+      }
+      .deleteBtn {
+        border: none;
+        background-color: none;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Expense Tracker</title>
   </head>
-  <body>
+  <body style="text-align: center">
+    <div class="container">
+      <h1 style="color: #070">Expense Tracker</h1>
+      <div class="Name">
+        <span>Name:</span>
+        <input type="text" class="expenseName" />
+      </div>
+
+      <div class="formLine left">
+        <span>Date:</span>
+        <input type="date" name="EnterDate" class="expenseDate" />
+      </div>
+
+      <div class="formLine right">
+        <span>Price:</span>
+        <input type="number" class="expensePrice" />
+      </div>
+
+      <div class="formLine bottom">
+        <span>Payment Method</span>
+        <select class="paymentMethod">
+          <option value="Card">Card</option>
+          <option value="Cash">Cash</option>
+          <option value="Check">Check</option>
+          <option value="Crypto">Crypto</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <button class="addExpense">Add Expense</button>
+      <button class="Clear">Clear</button>
+    </div>
+    <div>
+      <table class="table">
+        <tbody class="tableBody">
+          <tr class="labels">
+            <td>Name</td>
+            <td>Date</td>
+            <td>Price</td>
+            <td>Payment Method</td>
+          </tr>
+          <tr class="expense">
+            <td>Name</td>
+            <td>Date</td>
+            <td>Price</td>
+            <td>Payment Method <button>X</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
